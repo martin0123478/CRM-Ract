@@ -4,7 +4,7 @@ const Layout = () => {
 
 
   const location = useLocation()
-  console.log(location)
+ 
   return (
     <div className="md:flex md:min-h-screen"> 
       <div className="md:w-1/4 bg-blue-900 px-5 py-10">
