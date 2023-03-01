@@ -3,6 +3,9 @@ import Formulario from "../components/Formulario"
 
 export async function action({request}){
   const formData = await request.formData()
+  //console.log(formData.get('nombre'))
+  const datos = Object.fromEntries(formData)
+  console.log(datos)
    return { ok: true };
 }
 
