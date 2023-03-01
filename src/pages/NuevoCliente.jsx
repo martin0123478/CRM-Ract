@@ -1,5 +1,12 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Form } from "react-router-dom"
 import Formulario from "../components/Formulario"
+
+export async function action({request}){
+  const formData = await request.formData()
+   return { ok: true };
+}
+
+
 function NuevoCliente() {
   const navigate = useNavigate()
   return (
@@ -16,7 +23,10 @@ function NuevoCliente() {
     </div>
 
     <div className="bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-20">
-      <form>
+      <Form
+        method="post"
+       
+      >
       <Formulario/>
       <input
         type="submit"
@@ -24,7 +34,7 @@ function NuevoCliente() {
         value="Registrar cliente"
       
       />
-      </form>
+      </Form>
     </div>
    </>
   )
